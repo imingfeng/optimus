@@ -1,0 +1,276 @@
+:global {
+  .photoGalleryBox {
+    background: rgba(55, 55, 55, 0.8);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    .ant-modal {
+      height: 100% !important;
+      text-align: center;
+      padding-bottom: 0;
+
+      .ant-modal-content {
+        height: 100%;
+        background: none;
+
+        .ant-modal-close {
+          display: none;
+          top: 10px;
+          right: 10px;
+          color: #fff;
+          background: #000;
+          border-radius: 50%;
+
+          &>span {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+          }
+        }
+
+        .ant-modal-body {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          .modalBox {
+            width: 900px;
+            height: 98%;
+            // padding: 0 30px;
+            background-color: rgba(0, 0, 0, 1);
+
+            .box {
+              position: relative;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+
+              .close {
+                position: absolute;
+                top: -15px;
+                right: -15px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+              }
+
+              .dercIcon {
+                opacity: 0;
+                position: absolute;
+                top: 50%;
+                width: 44px;
+                height: 80px;
+                margin-top: -98px;
+                transition: all .25s;
+                cursor: pointer;
+
+                &:hover {
+                  opacity: 1;
+                }
+
+                &.left {
+                  left: -4px;
+                }
+
+                &.right {
+                  right: -4px;
+                }
+              }
+
+              &:hover {
+                .dercIcon {
+                  opacity: 1;
+                }
+              }
+            }
+
+            .imgBox {
+              position: relative;
+              // height: 95%;
+              flex: 1;
+              margin: 10px 30px 0;
+              overflow: hidden;
+              box-sizing: border-box;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .tagName {
+                font-size: 16px;
+                color: #fff;
+              }
+
+              .top {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                color: #fff;
+                padding: 15px 0;
+                display: flex;
+                font-size: 14px;
+                justify-content: space-between;
+                background-color: rgba(0, 0, 0, .3);
+              }
+
+              .icon {
+                width: 24px;
+                margin-left: 16px;
+                cursor: pointer;
+
+                &.enlarge,
+                &.narrow {
+                  width: 20px;
+                  margin-left: 15px;
+                }
+              }
+
+              .proportion {
+                font-size: 12px;
+                padding-left: 5px;
+                position: absolute;
+                right: 5px;
+                bottom: 45px;
+              }
+
+              .name {
+                width: 600px;
+                text-align: left;
+              }
+
+              .oper {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+              }
+            }
+
+            .imgOperation {
+              flex-basis: 12%;
+              padding: 20px 0 20px 30px;
+              text-align: center;
+              box-sizing: border-box;
+              color: #fff;
+              box-sizing: border-box;
+              position: relative;
+              overflow-x: scroll;
+              overflow-y: hidden;
+
+              .thumbnailBox {
+                // width: max-content;
+                height: 100%;
+                overflow: hidden;
+
+                .imgSection {
+                  position: relative;
+                  background-position: center center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  float: left;
+                  width: 90px;
+                  height: 100%;
+                  margin-right: 18px;
+                  overflow: hidden;
+                  border-radius: 2px;
+                  border: 2px solid #000;
+                  box-sizing: border-box;
+                  cursor: pointer;
+
+                  &.selected {
+                    border-color: #1890ff;
+                  }
+
+                  img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                  }
+                }
+              }
+
+              .thumbnailPrev {
+                position: absolute;
+                left: 5px;
+                bottom: 40px;
+                cursor: pointer;
+              }
+
+              .thumbnailNext {
+                position: absolute;
+                right: 5px;
+                bottom: 40px;
+                cursor: pointer;
+              }
+
+              .thumIcon {
+                width: 30px;
+                display: block;
+              }
+            }
+
+            .imgOperation::-webkit-scrollbar {
+              width: 10px;
+              height: 10px;
+              /**/
+            }
+
+            .imgOperation::-webkit-scrollbar-track {
+              background: #000;
+              border-radius: 2px;
+            }
+
+            .imgOperation::-webkit-scrollbar-thumb {
+              background: #bfbfbf;
+              border-radius: 10px;
+            }
+
+            .imgOperation::-webkit-scrollbar-thumb:hover {
+              background: #333;
+            }
+
+            .imgOperation::-webkit-scrollbar-corner {
+              background: #179a16;
+            }
+          }
+
+          img {
+            // line-height: 100%;
+            // max-width: 100%;
+            // max-height: 100% !important;
+            max-width: 830px;
+            max-height: 80vh;
+          }
+        }
+
+        .ant-modal-footer {
+          display: none;
+          height: 8%;
+          text-align: center;
+          border-top: none;
+
+          div {
+            padding: 20px 0 0;
+            text-align: center;
+
+            span {
+              margin: 0 10px;
+              cursor: pointer;
+
+              .anticon {
+                font-size: 22px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.beeGif{
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+  img{
+    width: 100px;
+  }
+}
+
+@keyframes bee1{
+  5%{
+    transform: translate(0px, 1px) scale(0.7);
+  }
+
+  50%{
+    transform: translate(-20px, -10px) skew(10deg) scale(1);
+  }
+
+  80%{
+    transform: translate(1px, 1px) scale(0.7);
+  }
+}
+@keyframes bee2{
+  5%{
+    transform: translate(1px, 1px) scale(0.7);
+  }
+
+  50%{
+    transform: translate(-10px, -10px) scale(1);
+  }
+
+  80%{
+    transform: translate(1px, 1px) scale(0.7);
+  }
+}
+
+.beeBox{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0.1;
+  }
+  // .img1{
+  //   animation: bee1 2s infinite;
+  // }
+  // .img2{
+  //   animation: bee2 1s infinite;
+  // }
+}
